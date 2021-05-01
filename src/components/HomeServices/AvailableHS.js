@@ -42,6 +42,7 @@ const AvailableHS = () => {
             <Card>
                 <ul>
                     {DUMMY_HS.map(hs => <HSItem
+                        id={hs.id}
                         key={hs.id}
                         name={hs.name}
                         description={hs.description}

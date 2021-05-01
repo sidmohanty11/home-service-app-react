@@ -1,5 +1,6 @@
 import React from 'react';
 import './HSItem.css';
+import ItemForm from './ItemForm';
 
 const HSItem = (props) => {
     return (
@@ -14,6 +15,7 @@ const HSItem = (props) => {
                 </div>
             </div>
             <div>
+                <ItemForm />
             </div>
         </li>
     )
