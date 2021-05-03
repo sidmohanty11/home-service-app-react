@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './HSItem.css';
 import ItemForm from './ItemForm';
+import CartContext from '../../store/cart-context';
 
 const HSItem = (props) => {
+    const cartCtx = useContext(CartContext);
+    const addToCart = amt => {
+        cartCtx.addItem({
+            id: props.id,
+            name: props.name,
+            price: props.price,
+            amount: amt
+        });
+    };
+
     return (
         <li className="hs">
             <div>
@@ -15,7 +26,7 @@ const HSItem = (props) => {
                 </div>
             </div>
             <div>
-                <ItemForm />
+                <ItemForm id={props.id} onAddToCart={addToCart} />
             </div>
         </li>
     )

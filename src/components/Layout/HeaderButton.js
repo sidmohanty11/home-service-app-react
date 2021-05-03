@@ -7,7 +7,7 @@ const HeaderButton = (props) => {
     const cartCtx = useContext(CartContext);
 
     const numberOfItems = cartCtx.items.reduce((curNum, item) => {
-        return curNum + item.amount;
+        return +(curNum) + +(item.amount);
     },0)
 
     return (
@@ -15,7 +15,7 @@ const HeaderButton = (props) => {
             <span className="icon">
                 <img src={CartIcon} />
             </span>
-            <span>Your Cart</span>
+            <span>Your Services</span>
             <span className="badge">{numberOfItems}</span>
         </button>
     )

@@ -3,7 +3,7 @@ import './HSSummary.css';
 
 const HSSummary = () => {
     return (
-        <div className="summary">
+        <div className="summary-hs">
             <h2>Any Home Service? Jugaad has it!</h2>
             <p>No more fighting with the plumber who doesn't pick up your call!</p>
             <p>Jugaad has organizations or individual people
