@@ -1,18 +1,20 @@
-import './CartItem.css';
+import classes from './CartItem.module.css';
+
+//the cartItems component which renders each added service.
 
 const CartItem = (props) => {
      const price = `${props.price.toFixed(2)}`;
 
     return (
-        <li className='cart-item'>
+        <li className={classes['cart-item']}>
             <div>
                 <h2>{props.name}</h2>
-                <div className='summary'>
-                    <span className='price'>Rs.{price}</span>
-                    <span className='amount'>x {props.amount}</span>
+                <div className={classes.summary}>
+                    <span className={classes.price}>Rs.{price}</span>
+                    <span className={classes.amount}>x {props.amount}</span>
                 </div>
             </div>
-            <div className='actions'>
+            <div className={classes.actions}>
                 <button onClick={props.onRemove}>−</button>
                 <button onClick={props.onAdd}>+</button>
             </div>

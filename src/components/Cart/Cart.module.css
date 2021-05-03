@@ -24,9 +24,9 @@
   cursor: pointer;
   background-color: transparent;
   border: 1px solid #8a2b06;
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 25px;
-  margin-left: auto;
+  margin-left: 1rem;
 }
 
 .actions button:hover,
@@ -43,8 +43,4 @@
 .actions .button {
   background-color: #8a2b06;
   color: white;
-}
-
-.actions .spacing{
-  margin-bottom: 10px;
 }
