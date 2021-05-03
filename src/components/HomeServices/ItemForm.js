@@ -19,12 +19,12 @@ const ItemForm = (props) => {
             return;
         }
 
-        props.onAddToCart(enteredAmount);
+        props.onAddToCart(enteredAmountNum);
     };
 
     return (
         <form className={classes.form}>
-            <Input ref={amountInputRef} label="Men needed" input={{type:'number',id:'amount_'+props.id,min:'1',max:'5',step:'1',defaultValue:'1'}} />
+            <Input ref={amountInputRef} label="Men needed" input={{type:'number',id:'amount_'+props.id,min:'1',max:'10',step:'1',defaultValue:'1'}} />
             <button onClick={submitHandler}>Add</button>
             {!amountIsValid && <p>Please enter valid input!</p>}
         </form>

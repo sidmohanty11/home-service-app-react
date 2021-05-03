@@ -41,6 +41,10 @@ const cartReducer = (state, action) => {
             updatedItems = [state.items];
             updatedItems[existingCartItemIx] = updatedItem;
         }
+        return {
+            items: updatedItems,
+            totalAmount: updatedTA
+        };
     }
     return defaultCartState;
 };
