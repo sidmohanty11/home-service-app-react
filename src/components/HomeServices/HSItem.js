@@ -1,7 +1,9 @@
 import React, {useContext} from 'react';
-import './HSItem.css';
+import classes from './HSItem.module.css';
 import ItemForm from './ItemForm';
 import CartContext from '../../store/cart-context';
+
+//renders each <li> item to go through the database and output every <li> item
 
 const HSItem = (props) => {
     const cartCtx = useContext(CartContext);
@@ -15,13 +17,13 @@ const HSItem = (props) => {
     };
 
     return (
-        <li className="hs">
+        <li className={classes.hs}>
             <div>
                 <h3>{props.name}</h3>
-                <div className="description">
+                <div className={classes.description}>
                     {props.description}
                 </div>
-                <div className="price">
+                <div className={classes.price}>
                     &#8377; {props.price.toFixed(2)}
                 </div>
             </div>

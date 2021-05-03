@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../UI/Card';
-import './AvailableHS.css';
+import classes from './AvailableHS.module.css';
 import HSItem from './HSItem';
 
 const DUMMY_HS = [
@@ -36,9 +36,11 @@ const DUMMY_HS = [
     },
 ];
 
+//The no. of available home services available wrapped around a Card.
+
 const AvailableHS = () => {
     return (
-        <div className="hs">
+        <div className={classes.hs}>
             <Card>
                 <ul>
                     {DUMMY_HS.map(hs => <HSItem
