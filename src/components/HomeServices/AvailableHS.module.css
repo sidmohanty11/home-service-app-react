@@ -11,6 +11,17 @@
   padding: 0;
 }
 
+.loading{
+  text-align: center;
+  font-size: x-large;
+}
+
+.httpError{
+  text-align: center;
+  font-size: x-large;
+  color: red;
+}
+
 @keyframes hs-appear {
   from {
     opacity: 0;
